@@ -1,0 +1,14 @@
+import email
+from enum import unique
+
+from click import password_option
+from . import db
+from flask_login import UserMixin
+from sqlalchemy.sql import func
+
+class User(db.Model,UserMixin):
+    id = db.Column(db.Integer, primary_key= True)
+    email = db.Column()
+    username = db.Column()
+    password = db.Column()
+    username = db.Column()
